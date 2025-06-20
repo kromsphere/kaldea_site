@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kaldea - Codex</title>
+  <link rel="stylesheet" href="style.css" />
+   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0d0d0d;
+      font-family: 'EB Garamond', serif;
+      color: #f5f5f5;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .parchment-anim {
+      animation: unroll 2s ease-out;
+      transform-origin: top;
+    }
+
+    @keyframes unroll {
+      0% {
+        transform: scaleY(0);
+      }
+      100% {
+        transform: scaleY(1);
+      }
+    }
+
+    header {
+      background-color: rgba(20, 20, 20, 0.95);
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 4px solid #c2a96d;
+    }
+
+    header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      margin: 0;
+      color: #d4af7f;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin-top: 1rem;
+      color: #c7b79d;
+    }
+
+    .fiches {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .fiche {
+      background: #1f1b16;
+      border: 2px solid #d4af7f;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(212, 175, 127, 0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .fiche:hover {
+      transform: scale(1.03);
+    }
+
+    .fiche h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #efd8a1;
+    }
+
+    .fiche a {
+      display: block;
+      margin: 0.3rem auto;
+      padding: 0.5rem 1rem;
+      background: #8b6e46;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      width: fit-content;
+    }
+
+    .fiche a:hover {
+      background: #5e3c1e;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="image/logo.png" alt="Logo Kaldea" class="logo" />
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="codex.html">Codex</a>
+      <a href="monde.html">Monde</a>
+      <a href="archives.html">Archives</a>
+    </nav>
+  </header>
+
+  <img src="image/banner.jpg" alt="Bannière Kaldea" class="banner" />
+
+  <div class="container">
+    <header class="parchment-anim">
+    <h1>Archives des Âmes de Kaldea</h1>
+    <p>Choisis ton hôte, forge ton destin... ou ravive une légende.</p>
+  </header>
+
+  <section class="fiches parchment-anim">
+
+    <div class="fiche">
+      <h2>Fiche vierge</h2>
+      <a href="pdf/fiche_c.pdf" target="_blank">Télécharger (Couleur)</a>
+      <a href="pdf/fiche_nb.pdf" target="_blank">Télécharger (N&B)</a>
+    </div>
+
+    <div class="fiche">
+      <h2>Fiche des Capacités</h2>
+      <a href="pdf/Force.pdf" target="_blank">Télécharger</a>
+    </div>
+
+    <div class="fiche">
+      <h2>Exemple - Haut Elfe</h2>
+      <a href="pdf/finala.pdf" target="_blank">Voir la fiche</a>
+    </div>
+
+    <div class="fiche">
+      <h2>Exemple - Nain des Montagnes</h2>
+      <a href="pdf/lunne.pdf" target="_blank">Voir la fiche</a>
+    </div>
+
+    <div class="fiche">
+      <h2>Exemple - Impis</h2>
+      <a href="pdf/zikin.pdf" target="_blank">Voir la fiche</a>
+    </div>
+
+  </section>
+
+  </div>
+</body>
+</html>

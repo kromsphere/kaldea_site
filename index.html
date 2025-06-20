@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kaldea - Accueil</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="image/logo.png" alt="Logo Kaldea" class="logo" />
+    <nav>
+      <a href="codex.html">Codex</a>
+      <a href="monde.html">Monde</a>
+      <a href="fiches.html">Fiches Perso</a>
+      <a href="archives.html">Archives</a>
+    </nav>
+  </header>
+
+  <img src="image/banner.jpg " alt="Bannière Kaldea" class="banner" />
+
+  <div class="container">
+    <h1>Bienvenue dans Kaldea</h1>
+    <p>Kaldea est un monde que j’ai créé de toutes pièces, une terre de magie, de légendes, et de conflits où chaque joueur écrit sa propre légende. Ce site est votre guide dans cet univers vivant.</p>
+   
+    <div class="parchment" tabindex="0" aria-expanded="false" role="button" aria-controls="gazette-content" onclick="toggleParchment(this)">
+      <div class="parchment-title">La Gazette de Kaldea</div>
+      <div class="parchment-content" id="gazette-content" hidden>
+        <p>Retrouvez ici les dernières nouvelles, récits et annonces de Kaldea.</p>
+      </div>
+    </div>
+
+    <div class="parchment" tabindex="0" aria-expanded="false" role="button" aria-controls="sessions-content" onclick="toggleParchment(this)">
+      <div class="parchment-title">Dates des prochaines sessions</div>
+      <div class="parchment-content" id="sessions-content" hidden>
+        <p>Prochaines aventures et rendez-vous à noter dans vos calendriers.</p>
+      </div>
+    </div>
+
+    <div class="parchment" tabindex="0" aria-expanded="false" role="button" aria-controls="materiel-content" onclick="toggleParchment(this)">
+      <div class="parchment-title">Matériel de jeu</div>
+      <div class="parchment-content" id="materiel-content" hidden>
+        <p>Accédez aux documents, fiches et outils indispensables.</p>
+      </div>
+    </div>
+
+    <div class="parchment" tabindex="0" aria-expanded="false" role="button" aria-controls="autre-content" onclick="toggleParchment(this)">
+      <div class="parchment-title">Communauté & échanges</div>
+      <div class="parchment-content" id="autre-content" hidden>
+        <p>Discussions, idées, retours et projets autour de Kaldea.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function toggleParchment(elem) {
+    const content = elem.querySelector('.parchment-content');
+    const expanded = elem.getAttribute('aria-expanded') === 'true';
+
+    if (expanded) {
+      content.hidden = true;
+      elem.setAttribute('aria-expanded', 'false');
+      content.style.maxHeight = null;
+    } else {
+      content.hidden = false;
+      elem.setAttribute('aria-expanded', 'true');
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  }
+</script>
+</body>
+</html>
